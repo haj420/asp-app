@@ -17,7 +17,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.charwebs.ASP",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.charwebs.ASP",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
