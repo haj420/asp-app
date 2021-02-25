@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, {Component, useEffect, useState } from 'react';
 import { ImageBackground, Button, View, Text, StyleSheet, TouchableOpacity, TouchableHighlight, Image, Linking, StatusBar, SafeAreaView, ScrollView, ActivityIndicator} from 'react-native';
+import {WebView} from 'react-native-webview';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,7 +10,32 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AntDesign } from '@expo/vector-icons';
 import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
 
+const whatsNewUrl = "https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c"
+const jsCode = "window.postMessage(document.getElementById('gb-main').innerHTML)"
 
+function SplashScreen({ navigation }) {
+// SPLASH SCREEN
+  return (
+    <View
+	style={styles.container}>
+
+      <Image source={require('./assets/headerbackground.jpg')} style={styles.SplashBanner} />
+      <TouchableHighlight
+          onPress={() =>{navigation.push('Home')}}>
+        <AntDesign name="closecircle" size={34} color="red" styles={styles.close} />
+        </TouchableHighlight>
+
+
+
+  <WebView
+    javaScriptEnabled={true}
+    injectedJavaScript={jsCode}
+    source={{uri: 'https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c'}}
+    onMessage={event => console.log('Received: ', event.nativeEvent.data)}
+  />
+    </View>
+  );
+}
 
 function HomeScreen({ navigation }) {
   return (
@@ -165,7 +191,8 @@ function App() {
 
   return (
     <NavigationContainer screenOptions={{headerTransparent: true}} >
-      <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true}}>
+      <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{headerShown: false, headerTransparent: true}}>
+        <Stack.Screen name="SplashScreen" component={SplashScreen}/>
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="SendPhoto" component={SendPhotoScreen} />
         <Stack.Screen name="BeSocial" component={BeSocialScreen} />
@@ -175,6 +202,13 @@ function App() {
   );
 }
 const styles = StyleSheet.create({
+  splashContainer: {
+	  flex:1,
+      backgroundColor: '#fff',
+       justifyContent: 'center',
+       alignItems: 'center',
+       padding: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -188,6 +222,14 @@ const styles = StyleSheet.create({
     height: 259,
     top:0,
   },
+  close: {
+    alignSelf:'flex-start',
+	margin:100,
+    position: 'absolute',
+    left:     50,
+    top:      320,
+    zIndex:9999
+  },
   leftcircle: {
     alignSelf:'flex-start',
     position: 'absolute',
@@ -200,6 +242,11 @@ const styles = StyleSheet.create({
     height: 259,
     top:0,
     alignSelf: 'center',
+  },
+  SplashBanner: {
+    width: '100%',
+    height: 70,
+    top:0,
   },
   ContactUsBanner: {
     width: '100%',
