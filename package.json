@@ -1,0 +1,41 @@
+{
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
+    "expo": "~38.0.1",
+    "expo-linking": "^1.0.3",
+    "expo-splash-screen": "^0.5.0",
+    "expo-status-bar": "^1.0.0",
+    "expo-updates": "~0.2.10",
+    "expo-web-browser": "~8.3.1",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "~0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-inappbrowser-reborn": "^3.4.0",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-screens": "^2.9.0",
+    "react-native-unimodules": "~0.10.1",
+    "react-native-web": "^0.15.0",
+    "react-native-webview": "9.4.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.11.0",
+    "babel-preset-expo": "~8.1.0"
+  },
+  "private": true,
+  "name": "ASP-bak",
+  "version": "1.0.0"
+}
