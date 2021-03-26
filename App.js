@@ -11,7 +11,7 @@ import { AntDesign } from '@expo/vector-icons';
 import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
 
 const whatsNewUrl = "https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c"
-const jsCode = "window.postMessage(document.getElementById('gb-main').innerHTML)"
+const jsCode = "window.postMessage(document.getElementById('newLink').innerHTML)"
 
 function SplashScreen({ navigation }) {
 // SPLASH SCREEN
