@@ -10,7 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AntDesign } from '@expo/vector-icons';
 import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
 
-const whatsNewUrl = "https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c"
+//const whatsNewUrl = "https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c"
 const jsCode = "window.postMessage(document.getElementById('newLink').innerHTML)"
 
 function SplashScreen({ navigation }) {
@@ -25,12 +25,10 @@ function SplashScreen({ navigation }) {
         <AntDesign name="closecircle" size={34} color="red" styles={styles.close} />
         </TouchableHighlight>
 
-
-
   <WebView
     javaScriptEnabled={true}
     injectedJavaScript={jsCode}
-    source={{uri: 'https://mailchi.mp/16329d7c7291/asp-apology-and-promise-4799221?e=b29be04e9c'}}
+    source={{uri: 'https://startwebservicesbackup.com/asp/eblast.html'}}
     onMessage={event => console.log('Received: ', event.nativeEvent.data)}
   />
     </View>
