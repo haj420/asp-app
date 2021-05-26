@@ -28,7 +28,7 @@ function SplashScreen({ navigation }) {
   <WebView
     javaScriptEnabled={true}
     injectedJavaScript={jsCode}
-    source={{uri: 'https://startwebservicesbackup.com/asp/eblast.html'}}
+    source={{uri: 'https://autoformsandsupplies.com/eblast.html'}}
     onMessage={event => console.log('Received: ', event.nativeEvent.data)}
   />
     </View>
@@ -48,7 +48,7 @@ function HomeScreen({ navigation }) {
         </TouchableHighlight>
 
         <TouchableHighlight
-          onPress={() =>{ WebBrowser.openBrowserAsync("http://autoservice-catalog.wspdev.com/featured_categories.asp")}}>
+          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.cld.bz/AUTOCAT2020FULL")}}>
         <Image source={require('./assets/Catalog-button.png')} style={styles.HomeScreenButton}/>
         </TouchableHighlight>
 
@@ -89,7 +89,7 @@ function SendPhotoScreen({ navigation }) {
       <Text>Use this feature to send us a photo of any item requested by your customer that you cannot find! Our research team will find it and handle the order!</Text>
       <Button style={styles.button}
         title="Send Photo"
-        onPress={() => Linking.openURL('mailto:wkstart@startadvertising.com?subject=ASP APP EMAIL TEST&body=Dear ASP,') }/>
+        onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP APP EMAIL TEST&body=Dear ASP,') }/>
     </View>
   );
 }
@@ -109,7 +109,7 @@ function BeSocialScreen({ navigation }) {
       <Text>Use this feature to send us a photo for use on ASP social media! For example, share a photo of a neat idea you handled for a dealer and then watch us on LinkedIn and Facebook to see ideas from others. You could WIN our mothly "BEST PHOTO" prize!</Text>
       <Button style={styles.button}
         title="Send Photo"
-        onPress={() => Linking.openURL('mailto:wkstart@startadvertising.com?subject=ASP Social&body=Dear ASP,') }/>
+        onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP Social&body=Dear ASP,') }/>
       <Text>*Submission of a photo constitutes your permission for its publication on ASP social media.</Text>
     </View>
   );
