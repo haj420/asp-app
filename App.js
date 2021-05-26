@@ -153,17 +153,17 @@ function ContactUsScreen({ navigation }) {
         <View style={styles.contactLabels}>
           <Text style={styles.contactH1}>EMAIL</Text>
             <Text style={styles.contactH2}>Orders</Text>
-            <TouchableHighlight onPress={() => Linking.openURL('mailto:wkstart@startadvertising.com?subject=Order Info&body=Dear ASP Orders,') }>
+            <TouchableHighlight onPress={() => Linking.openURL('mailto:Orders@AutoServiceProducts.com?subject=Order Info&body=Dear ASP Orders,') }>
               <Text style={styles.contactText}>Orders@AutoServiceProducts.com</Text>
             </TouchableHighlight>
 
             <Text style={styles.contactText}>Sales</Text>
-            <TouchableHighlight onPress={() => Linking.openURL('mailto:wkstart@startadvertising.com?subject=Sales Info&body=Dear ASP Orders,') }>
+            <TouchableHighlight onPress={() => Linking.openURL('mailto:Sales@AutoServiceProducts.com?subject=Sales Info&body=Dear ASP Orders,') }>
               <Text style={styles.contactText}>Sales@AutoServiceProducts.com</Text>
             </TouchableHighlight>
 
            <Text style={styles.contactText}>Service</Text>
-           <TouchableHighlight onPress={() => Linking.openURL('mailto:wkstart@startadvertising.com?subject=Customer Service Info&body=Dear ASP Orders,') }>
+           <TouchableHighlight onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=Customer Service Info&body=Dear ASP Orders,') }>
              <Text style={styles.contactText}>CustomerService@AutoServiceProducts.com</Text>
            </TouchableHighlight>
 
