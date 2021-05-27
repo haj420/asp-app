@@ -89,7 +89,7 @@ function SendPhotoScreen({ navigation }) {
       <Text>Use this feature to send us a photo of any item requested by your customer that you cannot find! Our research team will find it and handle the order!</Text>
       <Button style={styles.button}
         title="Send Photo"
-        onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP APP EMAIL TEST&body=Dear ASP,') }/>
+        onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP Send Photo Submission&body=Dear ASP,') }/>
     </View>
   );
 }
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
   },
   logoBanner: {
     width: '100%',
-    height: 259,
+    height: 20%,
     top:0,
   },
   close: {

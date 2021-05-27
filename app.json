@@ -8,10 +8,11 @@
       "buildNumber": "1.0.2"
     },
     "android": {
-		"adaptiveIcon": {
-			"foregroundImage" : "./assets/android-icon.png",
-			"backgroundColor" : "#FFF"
-		}
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon.png",
+        "backgroundColor": "#FFF"
+      },
+      "package": "com.charwebs.ASP"
     },
     "description": "",
     "slug": "asp",
