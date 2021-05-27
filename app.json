@@ -2,13 +2,16 @@
   "expo": {
     "name": "ASP",
     "version": "1.0.2",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ios-icon.png",
     "ios": {
       "bundleIdentifier": "com.charwebs.ASP",
       "buildNumber": "1.0.2"
     },
     "android": {
-      "package": "com.charwebs.ASP"
+		"adaptiveIcon": {
+			"foregroundImage" : "./assets/android-icon.png",
+			"backgroundColor" : "#FFF"
+		}
     },
     "description": "",
     "slug": "asp",
