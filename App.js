@@ -5,7 +5,6 @@ import {WebView} from 'react-native-webview';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AntDesign } from '@expo/vector-icons';
 import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
@@ -48,7 +47,7 @@ function HomeScreen({ navigation }) {
         </TouchableHighlight>
 
         <TouchableHighlight
-          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.cld.bz/AUTOCAT2020FULL")}}>
+          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.cld.bz/AUTO-CAT-2021")}}>
         <Image source={require('./assets/Catalog-button.png')} style={styles.HomeScreenButton}/>
         </TouchableHighlight>
 
@@ -106,7 +105,7 @@ function BeSocialScreen({ navigation }) {
           onPress={() =>{navigation.push('Home')}}>
         <AntDesign name="leftcircle" size={24} color="red" />
         </TouchableHighlight>
-      <Text>Use this feature to send us a photo for use on ASP social media! For example, share a photo of a neat idea you handled for a dealer and then watch us on LinkedIn and Facebook to see ideas from others. You could WIN our mothly "BEST PHOTO" prize!</Text>
+      <Text>Use this feature to send us a photo for use on ASP social media! For example, share a photo of a neat idea you handled for a dealer and then watch us on LinkedIn and Facebook to see ideas from others. </Text>
       <Button style={styles.button}
         title="Send Photo"
         onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP Social&body=Dear ASP,') }/>
@@ -217,7 +216,7 @@ const styles = StyleSheet.create({
   },
   logoBanner: {
     width: '100%',
-    height: 20%,
+    height: '20%',
     top:0,
   },
   close: {
@@ -237,7 +236,7 @@ const styles = StyleSheet.create({
   },
   SendPhotoBanner: {
     width: '100%',
-    height: 259,
+    height: '20%',
     top:0,
     alignSelf: 'center',
   },
@@ -248,7 +247,7 @@ const styles = StyleSheet.create({
   },
   ContactUsBanner: {
     width: '100%',
-    height: 200,
+    height: '15%',
     top:0,
   },
   TopHomeScreenButton: {
