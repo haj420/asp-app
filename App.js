@@ -21,11 +21,12 @@ function SplashScreen({ navigation }) {
       <Image source={require('./assets/headerbackground.jpg')} style={styles.SplashBanner} />
       <TouchableHighlight
           onPress={() =>{navigation.push('Home')}}>
-        <AntDesign name="closecircle" size={34} color="red" styles={styles.close} />
+
+		<Image source={require('./assets/x-red-circle.png')} style={{width:35,height:35}}  />
         </TouchableHighlight>
 
   <WebView
-    javaScriptEnabled={true}
+    javaScriptEnabled={true} 
     injectedJavaScript={jsCode}
     source={{uri: 'https://autoformsandsupplies.com/eblast.html'}}
     onMessage={event => console.log('Received: ', event.nativeEvent.data)}
@@ -83,7 +84,7 @@ function SendPhotoScreen({ navigation }) {
       <Image source={require('./assets/headerbackground.jpg')} style={styles.SendPhotoBanner} />
       <TouchableHighlight
           onPress={() =>{navigation.push('Home')}}>
-        <AntDesign name="leftcircle" size={24} color="red" />
+        <Image source={require('./assets/back-red-circle.png')} style={{width:35,height:35}} />
         </TouchableHighlight>
       <Text>Use this feature to send us a photo of any item requested by your customer that you cannot find! Our research team will find it and handle the order!</Text>
       <Button style={styles.button}
@@ -103,7 +104,7 @@ function BeSocialScreen({ navigation }) {
 
       <TouchableHighlight
           onPress={() =>{navigation.push('Home')}}>
-        <AntDesign name="leftcircle" size={24} color="red" />
+        <Image source={require('./assets/back-red-circle.png')} style={{width:35,height:35}} />
         </TouchableHighlight>
       <Text>Use this feature to send us a photo for use on ASP social media! For example, share a photo of a neat idea you handled for a dealer and then watch us on LinkedIn and Facebook to see ideas from others. </Text>
       <Button style={styles.button}
@@ -126,7 +127,7 @@ function ContactUsScreen({ navigation }) {
         <Image source={require('./assets/ASP_logo_sm.png')} style={styles.ASPLogoSm} />
         <TouchableHighlight
             onPress={() =>{navigation.push('Home')}}>
-          <AntDesign name="leftcircle" size={24} color="red" />
+          <Image source={require('./assets/back-red-circle.png')} style={{width:35,height:35}}  />
           </TouchableHighlight>
         <View style={styles.contactLabels}>
           <Text style={styles.contactH1}>PHONE</Text>
