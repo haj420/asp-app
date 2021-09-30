@@ -51,57 +51,57 @@ function BrandsScreen({ navigation }) {
 
 			<View style={{flex: 1, flexDirection: 'row'}}>
 			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
-			   <TouchableOpacity
+			   <TouchableOpacity style={styles.brandsBtn}
 				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/CAATS-Brand-Sheet-210601.pdf")}}>
-				   <Image source={require('./assets/CAATS.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+				   <Image source={require('./assets/CAATS.png')} style={styles.brandsScreenButton}/>
 			   </TouchableOpacity>
 			   </View>
 			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
-			   <TouchableOpacity
+			   <TouchableOpacity style={styles.brandsBtn}
 				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/TruForm-Brand-Sheet-210716-flattened.pdf")}}>
-				   <Image source={require('./assets/TruForm.jpeg')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+				   <Image source={require('./assets/TruForm.jpeg')} style={styles.brandsScreenButton}/>
 			   </TouchableOpacity>
 			   </View>
 			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Heavy-Brite-Brand-Sheet-210706-flattened.pdf")}}>
- 				   <Image source={require('./assets/HeavyBrite.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/HeavyBrite.png')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Safe-Shield-Brand-Sheet-210716-flattened.pdf")}}>
- 				   <Image source={require('./assets/SafeShield.jpeg')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/SafeShield.jpeg')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/AdVer-Tag-Brand-Sheet-210716-flattened.pdf")}}>
- 				   <Image source={require('./assets/AdVerTag.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/AdVerTag.png')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/ViZi-Brand-Sheet-210601-flattened.pdf")}}>
- 				   <Image source={require('./assets/Vizilogo.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/Vizilogo.png')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Peel-n-Seal-Brand-Sheet-210716-flattened.pdf")}}>
- 				   <Image source={require('./assets/PeelNSeal.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/PeelNSeal.png')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableOpacity
+ 			   <TouchableOpacity style={styles.brandsBtn}
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/File-Right-Brand-Sheet-210601-flattened.pdf")}}>
- 				   <Image source={require('./assets/fileRight.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
+ 				   <Image source={require('./assets/fileRight.png')} style={styles.brandsScreenButton}/>
  			   </TouchableOpacity>
  			   </View>
  			 </View>
@@ -133,30 +133,36 @@ function HomeScreen({ navigation }) {
 		  	</View>
 		        <Image source={require('./assets/aspBanner.png')} style={styles.logoBanner} />
 
+
 		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://shop.autoserviceproducts.com/landing.asp?autopage=/Default.asp")}}>
 		        <Image source={require('./assets/aspConnectBtn.png')} style={styles.TopHomeScreenButton}/>
 		        </TouchableOpacity>
+
 
 		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.cld.bz/AUTO-CAT-2021")}}>
 		        <Image source={require('./assets/catalogBtn.png')} style={styles.HomeScreenButton}/>
 		        </TouchableOpacity>
 
+
 		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://shop.autoserviceproducts.com/landing.asp?autopage=/Default.asp")}}>
 		        <Image source={require('./assets/prodBtn.png')} style={styles.HomeScreenButton}/>
 		        </TouchableOpacity>
+
 
 		        <TouchableOpacity
 		          onPress={() =>{navigation.push('SendPhoto')}}>
 		        <Image source={require('./assets/sendBtn.png')} style={styles.HomeScreenButton}/>
 		        </TouchableOpacity>
 
+
 		        <TouchableOpacity
 		          onPress={() =>{navigation.push('BeSocial')}}>
 		        <Image source={require('./assets/socialBtn.png')} style={styles.HomeScreenButton}/>
 		        </TouchableOpacity>
+
 
 		        <TouchableOpacity
 		          onPress={() =>{navigation.push('ContactUs')}}>
@@ -173,6 +179,7 @@ function SendPhotoScreen({ navigation }) {
 	<View style={{ height:50, backgroundColor: 'red' }} />
 <View style={{flexDirection: 'row'}}>
    <View style={{width: '20%', height:100, justifyContent:'center'}} >
+
    <TouchableOpacity
 	 onPress={() =>{navigation.push('Home')}}>
    <Image source={require('./assets/backArrow.png')} style={{alignSelf:'flex-start'}}/>
@@ -391,9 +398,17 @@ const styles = StyleSheet.create({
     top:0,
   },
   TopHomeScreenButton: {
+	width:'80%',
     marginTop:10,
     alignSelf: 'center',
     width: 350,
+    resizeMode: 'contain',
+  },
+  brandsScreenButton: {
+    marginTop:7,
+    alignSelf: 'center',
+    width: 150,
+	height: 50,
     resizeMode: 'contain',
   },
   HomeScreenButton: {
@@ -480,6 +495,13 @@ const styles = StyleSheet.create({
     color: 'black',
     alignSelf:'flex-start',
     fontSize:12,
-}
+  },
+  brandsBtn: {
+    padding:0,
+	margin:0,
+	height:100,
+	alignItems: 'center',
+	justifyContent: 'center'
+  }
 });
 export default App;
