@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React, {Component, useEffect, useState } from 'react';
-import { ImageBackground, Button, View, Text, StyleSheet, TouchableOpacity, TouchableHighlight, Image, Linking, StatusBar, SafeAreaView, ScrollView, ActivityIndicator} from 'react-native';
+import { ImageBackground, Button, View, Text, StyleSheet, TouchableOpacity, Image, Linking, StatusBar, SafeAreaView, ScrollView, ActivityIndicator} from 'react-native';
 import {WebView} from 'react-native-webview';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
@@ -18,9 +18,9 @@ function SplashScreen({ navigation }) {
     <View
 	style={styles.splashContainer}>
       <Image source={require('./assets/aspBanner.png')} style={styles.SplashBanner} />
-      <TouchableHighlight onPress={() =>{navigation.push('BrandsScreen')}}>
+      <TouchableOpacity onPress={() =>{navigation.push('BrandsScreen')}}>
 	  <Image source={require('./assets/x-red-circle.png')} style={{width:35,height:35}}  />
-      </TouchableHighlight>
+      </TouchableOpacity>
 	  <WebView
     javaScriptEnabled={true}
     injectedJavaScript={jsCode}
@@ -38,71 +38,71 @@ function BrandsScreen({ navigation }) {
 		<ScrollView style={{backgroundColor:'white'}}>
 		<View style={{flex:1, backgroundColor:'white'}}>
 			<View style={{ height:50, backgroundColor: 'red' }} />
-			<TouchableHighlight
+			<TouchableOpacity
 			  onPress={() =>{navigation.push('Home')}}>
 				<Image source={require('./assets/hamburgerMenu.png')} style={{alignSelf:'flex-end'}} />
-			</TouchableHighlight>
+			</TouchableOpacity>
 	        <Image source={require('./assets/ASP-logo-black-red-PMS1788-1inDistCare-150dpi.png')} style={styles.brandsBanner, {alignSelf:'center', marginTop:'5%'}} />
 			<View style={{borderTopColor:'black', borderTopWidth:1, height:'5%', marginTop:30, marginBottom:0}} />
-			<TouchableHighlight
+			<TouchableOpacity
 			  onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/ASP_product-brand-guide_031721.pdf")}}>
 				<Image source={require('./assets/ourBrands.png')} style={{alignSelf:'flex-end', height:45, width:260, marginTop:0, alignSelf:'center'}} />
-			</TouchableHighlight>
+			</TouchableOpacity>
 
 			<View style={{flex: 1, flexDirection: 'row'}}>
 			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
-			   <TouchableHighlight
+			   <TouchableOpacity
 				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/CAATS-Brand-Sheet-210601.pdf")}}>
 				   <Image source={require('./assets/CAATS.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
-			   </TouchableHighlight>
+			   </TouchableOpacity>
 			   </View>
 			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
-			   <TouchableHighlight
+			   <TouchableOpacity
 				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/TruForm-Brand-Sheet-210716-flattened.pdf")}}>
 				   <Image source={require('./assets/TruForm.jpeg')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
-			   </TouchableHighlight>
+			   </TouchableOpacity>
 			   </View>
 			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Heavy-Brite-Brand-Sheet-210706-flattened.pdf")}}>
  				   <Image source={require('./assets/HeavyBrite.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Safe-Shield-Brand-Sheet-210716-flattened.pdf")}}>
  				   <Image source={require('./assets/SafeShield.jpeg')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/AdVer-Tag-Brand-Sheet-210716-flattened.pdf")}}>
  				   <Image source={require('./assets/AdVerTag.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/ViZi-Brand-Sheet-210601-flattened.pdf")}}>
  				   <Image source={require('./assets/Vizilogo.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row'}}>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}} >
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/Peel-n-Seal-Brand-Sheet-210716-flattened.pdf")}}>
  				   <Image source={require('./assets/PeelNSeal.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			   <View style={{width: '50%', height:100, justifyContent:'center'}}>
- 			   <TouchableHighlight
+ 			   <TouchableOpacity
  				 onPress={() =>{ WebBrowser.openBrowserAsync("https://www.autoserviceproducts.com/wp-content/uploads/File-Right-Brand-Sheet-210601-flattened.pdf")}}>
  				   <Image source={require('./assets/fileRight.png')} style={styles.TopHomeScreenButton, {width:'80%', resizeMode:'contain', alignSelf:'center'}}/>
- 			   </TouchableHighlight>
+ 			   </TouchableOpacity>
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row', justifyContent:'center', alignItems:'center'}}>
@@ -120,10 +120,10 @@ function HomeScreen({ navigation }) {
 			<View style={{ height:50, backgroundColor: 'red' }} />
 			<View style={{flexDirection: 'row'}}>
 			   <View style={{width: '20%', height:100, justifyContent:'center'}} >
-				   <TouchableHighlight
+				   <TouchableOpacity
 					 onPress={() =>{navigation.push('BrandsScreen')}}>
 				   <Image source={require('./assets/backArrow.png')} style={{alignSelf:'flex-start'}}/>
-				   </TouchableHighlight>
+				   </TouchableOpacity>
 			   </View>
 		   	   <View style={{width: '60%', height:100, justifyContent:'center'}} >
 				   <Text style={{alignSelf:'center', fontSize:20}}>
@@ -133,35 +133,35 @@ function HomeScreen({ navigation }) {
 		  	</View>
 		        <Image source={require('./assets/aspBanner.png')} style={styles.logoBanner} />
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://shop.autoserviceproducts.com/landing.asp?autopage=/Default.asp")}}>
 		        <Image source={require('./assets/aspConnectBtn.png')} style={styles.TopHomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.cld.bz/AUTO-CAT-2021")}}>
 		        <Image source={require('./assets/catalogBtn.png')} style={styles.HomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{ WebBrowser.openBrowserAsync("https://shop.autoserviceproducts.com/landing.asp?autopage=/Default.asp")}}>
 		        <Image source={require('./assets/prodBtn.png')} style={styles.HomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{navigation.push('SendPhoto')}}>
 		        <Image source={require('./assets/sendBtn.png')} style={styles.HomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{navigation.push('BeSocial')}}>
 		        <Image source={require('./assets/socialBtn.png')} style={styles.HomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 
-		        <TouchableHighlight
+		        <TouchableOpacity
 		          onPress={() =>{navigation.push('ContactUs')}}>
 		        <Image source={require('./assets/contactBtn.png')} style={styles.HomeScreenButton}/>
-		        </TouchableHighlight>
+		        </TouchableOpacity>
 	    </View>
   );
 }
@@ -173,10 +173,10 @@ function SendPhotoScreen({ navigation }) {
 	<View style={{ height:50, backgroundColor: 'red' }} />
 <View style={{flexDirection: 'row'}}>
    <View style={{width: '20%', height:100, justifyContent:'center'}} >
-   <TouchableHighlight
+   <TouchableOpacity
 	 onPress={() =>{navigation.push('Home')}}>
    <Image source={require('./assets/backArrow.png')} style={{alignSelf:'flex-start'}}/>
-   </TouchableHighlight>
+   </TouchableOpacity>
    </View>
    <View style={{width: '60%', height:100, justifyContent:'center'}} >
    <Text style={{alignSelf:'center', fontSize:20}}>
@@ -202,10 +202,10 @@ function BeSocialScreen({ navigation }) {
 	<View style={{ height:50, backgroundColor: 'red' }} />
 <View style={{flexDirection: 'row'}}>
    <View style={{width: '20%', height:100, justifyContent:'center'}} >
-   <TouchableHighlight
+   <TouchableOpacity
 	 onPress={() =>{navigation.push('Home')}}>
    <Image source={require('./assets/backArrow.png')} style={{alignSelf:'flex-start'}}/>
-   </TouchableHighlight>
+   </TouchableOpacity>
    </View>
    <View style={{width: '60%', height:100, justifyContent:'center'}} >
    <Text style={{alignSelf:'center', fontSize:20}}>
@@ -234,10 +234,10 @@ function ContactUsScreen({ navigation }) {
 		  <View style={{ height:50, backgroundColor: 'red' }} />
 	  <View style={{flexDirection: 'row'}}>
 		 <View style={{width: '20%', height:100, justifyContent:'center'}} >
-		 <TouchableHighlight
+		 <TouchableOpacity
 		   onPress={() =>{navigation.push('Home')}}>
 		 <Image source={require('./assets/backArrow.png')} style={{alignSelf:'flex-start'}}/>
-		 </TouchableHighlight>
+		 </TouchableOpacity>
 		 </View>
 		 <View style={{width: '60%', height:100, justifyContent:'center'}} >
 		 <Text style={{alignSelf:'center', fontSize:20}}>
@@ -258,9 +258,9 @@ function ContactUsScreen({ navigation }) {
 	          <Text style={styles.contactH2}>Local</Text>
 			</View>
 			<View style={{flex:1}}>
-	          <TouchableHighlight onPress={() => Linking.openURL('tel:${8595252220}') }>
+	          <TouchableOpacity onPress={() => Linking.openURL('tel:${8595252220}') }>
 	            <Text style={styles.contactText}>859-525-2220</Text>
-	          </TouchableHighlight>
+	          </TouchableOpacity>
 	        </View>
 		</View>
         <View style={styles.contactLabels, {flexDirection:'row', marginLeft:10, alignItems:'center'}}>
@@ -269,33 +269,33 @@ function ContactUsScreen({ navigation }) {
 		  </View>
 
   			<View style={{flex:1}}>
-          <TouchableHighlight onPress={() => Linking.openURL('tel:${8008435443') }>
+          <TouchableOpacity onPress={() => Linking.openURL('tel:${8008435443') }>
             <Text style={styles.contactText}>800-843-5443</Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
 		  </View>
         </View>
 
         <View style={styles.contactLabels}>
           <Text style={styles.contactH1}>EMAIL</Text>
             <Text style={styles.contactH2}>Orders</Text>
-            <TouchableHighlight onPress={() => Linking.openURL('mailto:Orders@AutoServiceProducts.com?subject=Order Info&body=Dear ASP Orders,') }>
+            <TouchableOpacity onPress={() => Linking.openURL('mailto:Orders@AutoServiceProducts.com?subject=Order Info&body=Dear ASP Orders,') }>
               <Text style={styles.contactText, {textDecorationLine:'underline'}}>orders@autoserviceproducts.com</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
 
             <Text style={styles.contactH2}>Sales</Text>
-            <TouchableHighlight onPress={() => Linking.openURL('mailto:Sales@AutoServiceProducts.com?subject=Sales Info&body=Dear ASP Sales,') } >
+            <TouchableOpacity onPress={() => Linking.openURL('mailto:Sales@AutoServiceProducts.com?subject=Sales Info&body=Dear ASP Sales,') } >
               <Text style={styles.contactText, {textDecorationLine:'underline'}}>sales@autoserviceproducts.com</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
 
            <Text style={styles.contactH2}>Service</Text>
-           <TouchableHighlight onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=Customer Service Info&body=Dear ASP Customer Service,') }>
+           <TouchableOpacity onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=Customer Service Info&body=Dear ASP Customer Service,') }>
              <Text style={styles.contactText, {textDecorationLine:'underline'}}>customerservice@autoserviceproducts.com</Text>
-           </TouchableHighlight>
+           </TouchableOpacity>
 
            <Text style={styles.contactH2}>Artwork</Text>
-           <TouchableHighlight onPress={() => Linking.openURL('mailto:artwork@AutoServiceProducts.com?subject=Artwork&body=Dear ASP,') }>
+           <TouchableOpacity onPress={() => Linking.openURL('mailto:artwork@AutoServiceProducts.com?subject=Artwork&body=Dear ASP,') }>
             <Text style={styles.contactText, {textDecorationLine:'underline'}}>artwork@autoserviceproducts.com</Text>
-           </TouchableHighlight>
+           </TouchableOpacity>
             <Text style= {styles.contactAddyH1}>MAILING ADDRESS</Text>
             <Text style= {styles.contactText}>Automotive Service Products</Text>
             <Text style= {styles.contactText}>P.O. Box 951</Text>
