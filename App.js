@@ -106,7 +106,7 @@ function BrandsScreen({ navigation }) {
  			   </View>
  			 </View>
 			 <View style={{flex: 1, flexDirection: 'row', justifyContent:'center', alignItems:'center'}}>
-			 	<Text style={{paddingLeft:'5%', paddingRight:'5%'}}>Click each logo to learn how that exciting product line can help you increase sales and deepen customer loyalty!</Text>
+			 	<Text style={{paddingLeft:'5%', paddingRight:'5%', paddingBottom:50}}>ASP has created unique brands that you can present as YOURS, and none of them are based on the ASP name! Click on each logo to find out more.</Text>
 			 </View>
 		</View>
 	  </ScrollView>
@@ -252,7 +252,7 @@ function ContactUsScreen({ navigation }) {
 		 </Text>
 		 </View>
 	</View>
-		  <Image source={require('./assets/aspBanner.png')} style={styles.logoBanner} />
+		  <Image source={require('./assets/aspBanner.png')} style={styles.logoBanner, {width:'100%', height:180}} />
         <View style={styles.contactLabels}>
           <Text style={styles.contactH1, {color:'red', marginTop:30, fontSize:18, fontWeight:'bold'}}>PHONE</Text>
         </View>
@@ -324,7 +324,7 @@ function App() {
 
   return (
     <NavigationContainer screenOptions={{headerTransparent: true}} >
-      <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{headerShown: false, headerTransparent: true}}>
+      <Stack.Navigator initialRouteName="BrandsScreen" screenOptions={{headerShown: false, headerTransparent: true}}>
         <Stack.Screen name="SplashScreen" component={SplashScreen}/>
         <Stack.Screen name="BrandsScreen" component={BrandsScreen}/>
         <Stack.Screen name="Home" component={HomeScreen}/>

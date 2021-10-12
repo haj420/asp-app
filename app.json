@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "ASP",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "icon": "./assets/ios-icon.png",
     "ios": {
       "bundleIdentifier": "com.autoformsandsupplies.aspapp",
-      "buildNumber": "1.0.4"
+      "buildNumber": "1.0.5"
     },
     "android": {
       "adaptiveIcon": {
