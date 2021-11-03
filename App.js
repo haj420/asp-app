@@ -147,7 +147,7 @@ function HomeScreen({ navigation }) {
 
 
 		        <TouchableOpacity
-		          onPress={() =>{ WebBrowser.openBrowserAsync("https://shop.autoserviceproducts.com/landing.asp?autopage=/Default.asp")}}>
+		          onPress={() =>{ WebBrowser.openBrowserAsync("https://autoformsandsupplies.com/browse-products.php")}}>
 		        <Image source={require('./assets/prodBtn.png')} style={styles.HomeScreenButton}/>
 		        </TouchableOpacity>
 
