@@ -667,7 +667,7 @@
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3",
     "tmp": "^0.0.33",
-    "tmpl": "^1.0.4",
+    "tmpl": "^1.0.5",
     "to-fast-properties": "^2.0.0",
     "to-object-path": "^0.3.0",
     "to-regex": "^3.0.2",
