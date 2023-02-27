@@ -141,7 +141,7 @@
     "debug": "^4.3.1",
     "decamelize": "^1.2.0",
     "decimal.js": "^10.4.0",
-    "decode-uri-component": "^0.2.0",
+    "decode-uri-component": "^0.2.1",
     "deep-extend": "^0.6.0",
     "deep-is": "^0.1.4",
     "deepmerge": "^4.2.2",
