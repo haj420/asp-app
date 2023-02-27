@@ -5,7 +5,8 @@ import {WebView} from 'react-native-webview';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createStackNavigator } from '@react-navigation/stack';
 import { AntDesign } from '@expo/vector-icons';
 import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
 
@@ -13,6 +14,7 @@ import InAppBrowser from 'react-native-inappbrowser-reborn'; //not working yet.
 const jsCode = "window.postMessage(document.getElementById('newLink').innerHTML)"
 
 function SplashScreen({ navigation }) {
+console.log('splash screen');
 // SPLASH SCREEN
   return (
     <View
@@ -34,6 +36,7 @@ function SplashScreen({ navigation }) {
 
 // BRANDS SCREEN
 function BrandsScreen({ navigation }) {
+console.log('brands screen');
 	return (
 		<ScrollView style={{backgroundColor:'white'}}>
 		<View style={{flex:1, backgroundColor:'white'}}>
@@ -203,6 +206,18 @@ function SendPhotoScreen({ navigation }) {
 
 
 function BeSocialScreen({ navigation }) {
+  function facebookLink (id) {
+    let appLink = 'fb://profile/' + id
+    let browserLink = 'https://www.facebook.com/AutoServiceProducts'
+
+    Linking.canOpenURL(appLink).then(supported => {
+      if (!supported) {
+        Linking.openURL(browserLink) //If facebook app is not installed open in browser
+      } else {
+        Linking.openURL(appLink) //If facebook app is installed open in app
+      }
+    });
+  }
 // SEND SOCIAL PHOTO
   return (
     <View style={styles.container}>
@@ -228,6 +243,11 @@ function BeSocialScreen({ navigation }) {
         title="Send Photo"
         onPress={() => Linking.openURL('mailto:CustomerService@AutoServiceProducts.com?subject=ASP Social&body=Dear ASP,') }/>
       <Text>*Submission of a photo constitutes your permission for its publication on ASP social media.</Text>
+      <TouchableOpacity
+      onPress={() => facebookLink('944492192416491')}>
+      <Image source={require('./assets/f_logo_RGB-Blue_58.png')} style={{alignSelf:'center',top:200}}/>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -318,7 +338,7 @@ function ContactUsScreen({ navigation }) {
   );
 }
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 function App() {
 
