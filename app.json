@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "ASP",
-    "version": "1.0.5",
+    "version": "2.0.5",
     "icon": "./assets/ios-icon.png",
     "ios": {
       "bundleIdentifier": "com.autoformsandsupplies.aspapp",
-      "buildNumber": "1.0.5"
+      "buildNumber": "2.0.5"
     },
     "android": {
       "adaptiveIcon": {
@@ -17,13 +17,14 @@
     "description": "",
     "slug": "asp",
     "githubUrl": "https://github.com/haj420/asp-app",
-    "entryPoint": "node_modules/expo/AppEntry.js",
     "extra": {
       "eas": {
         "projectId": "ebaead3c-ff6d-437b-ae39-b3940d9a3b72"
       }
     },
-    "runtimeVersion": "1.0.0",
+    "runtimeVersion": {
+      "policy" : "sdkVersion"
+    },
     "updates": {
       "url": "https://u.expo.dev/ebaead3c-ff6d-437b-ae39-b3940d9a3b72"
     }

@@ -26,6 +26,12 @@
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId" : "charwebsllc@gmail.com",
+        "ascAppId" : "1579110509",
+        
+      }
+    }
   }
 }
